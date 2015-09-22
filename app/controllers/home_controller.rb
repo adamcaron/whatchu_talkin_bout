@@ -4,4 +4,12 @@ class HomeController < ApplicationController
 
   def welcome
   end
+
+  def search_results
+
+  end
+
+  def discussion
+
+  end
 end
