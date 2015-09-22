@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'home#landing'
 
   get '/auth/twitter/callback', to: 'sessions#create'
+  get '/logout', to: 'sessions#destroy'
 
   get '/welcome', to: 'home#welcome'
   get '/search_results', to: 'home#search_results'
