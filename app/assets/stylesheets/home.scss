@@ -1,0 +1,60 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#tagline a, #tagline a:visited, #tagline a:link {
+  margin-right: 30px;
+  font-size: 20px;
+  float: right;
+  // right: 20px;
+  // bottom: 20px;
+  // position: absolute;
+  text-decoration: none;
+  padding: 20px;
+  background-color: #9B59B6;
+  color: white;
+}
+
+#tagline p {
+  margin-left:30px;
+  display: inline;
+}
+
+#tagline {
+  font-size: 30px;
+  text-align: left;
+  padding: 60px 0 0px 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  height: 110px;
+  width: 100%;
+  background-color: rgba(1,31,33,.75);
+  color: #D2D7D3;
+  font-weight: 400;
+}
+
+#logo {
+  font-weight: 800;
+  font-size: 3em;
+  margin: 0;
+  color: #F4D03F;
+}
+
+#main-nav {
+  padding: 1em 0 0 1em;
+  height: 4em;
+}
+
+.landing-wrapper {
+  background-position: 55% 14%, center;
+  background-size: 200%;
+  background-image: image-url("capitol");
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #2C3E50;
+}
