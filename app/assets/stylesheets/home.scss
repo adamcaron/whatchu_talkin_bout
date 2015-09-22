@@ -1,0 +1,108 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+// WELCOME
+
+.search input[type="text"] {
+  height: 22px;
+  font-size: 16px;
+  padding: 12px 20px;
+  background-color: #EEEEEE;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  color: rgb(86, 90, 92);
+}
+
+// .search input[type="submit"] {
+.search a {
+
+  text-decoration: none;
+
+  padding: 12px 20px;
+  font-size: 16px;
+  height: 45px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  color: #EEEEEE;
+  background-color: #0b5259;
+  // -webkit-box-shadow: 0px 0px 0px rgba(0,0,0,0);
+  // -moz-box-shadow: 0px 0px 0px rgba(0,0,0,0);
+}
+
+.search {
+  color: #D2D7D3;
+  font-weight: 400;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  margin: 12px 30px 0 0;
+  padding: 12px 20px;
+  // width: 170px;
+  float: right;
+  background-color: rgba(1,31,33,.75);
+}
+
+// LANDING
+
+p#tagline {
+  color: #D2D7D3;
+  font-weight: 400;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  margin: 12px 30px 0 0;
+  padding: 12px 20px;
+  width: 170px;
+  float: right;
+  background-color: rgba(1,31,33,.75);
+}
+
+a.sign-out, a.sign-out:visited, a.sign-out:link {
+  border: 2px solid #9B59B6;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  margin: 12px 30px 0 0;
+  font-size: 16px;
+  float: right;
+  text-decoration: none;
+  padding: 12px 20px;
+  background-color: transparent;
+  color: #9B59B6;
+}
+
+a.sign-in, a.sign-in:visited, a.sign-in:link {
+  border: 2px solid transparent;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  margin: 12px 30px 0 0;
+  font-size: 16px;
+  float: right;
+  text-decoration: none;
+  padding: 12px 20px;
+  background-color: #9B59B6;
+  color: white;
+}
+
+#logo {
+  display: inline;
+  font-weight: 800;
+  font-size: 3em;
+  margin: 0;
+  color: #F4D03F;
+}
+
+#main-nav {
+  padding: 1em 0 0 1em;
+  height: 4em;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-position: 55% 14%, center;
+  background-size: 200%;
+  background-image: image-url("capitol");
+  padding: 0;
+  margin: 0;
+  background-color: #2C3E50;
+}

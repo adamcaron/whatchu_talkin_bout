@@ -13,3 +13,5 @@
  *= require_tree .
  *= require_self
  */
+
+input, buttom:focus { border: 0; outline:0; }
