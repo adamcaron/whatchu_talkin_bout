@@ -93,13 +93,11 @@ a.sign-in, a.sign-in:visited, a.sign-in:link {
 }
 
 #landing-headline {
+  text-shadow: 4px 4px 4px rgba(4, 37, 39, 0.4);
   line-height: .9em;
   margin: 150px 0 0 23%;
-  text-align: left;
-  // position: absolute;
-  // display: inline;
-  font-weight: 800;
   font-size: 6em;
+  font-weight: 800;
   color: #F4D03F;
 }
 
