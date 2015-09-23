@@ -65,9 +65,13 @@
 //   color: #F4D03F;
 // }
 
+#main-nav {
+  // padding: 1em 0 0 1em;
+  // height: 4em;
+}
+
 #feed-bg {
-  opacity: .5;
-  background-color: rgb(4, 37, 39);
+  background-color: rgba(4, 37, 39, .5);
   height: 100%;
   width: 100%;
   position: absolute;
