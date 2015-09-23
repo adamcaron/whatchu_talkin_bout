@@ -1,77 +1,81 @@
 <div id="feed-bg">
-  <nav id="main-nav">
-    <h1 id="logo">WHATCHU TALKIN' BOUT?</h1>
-    <%= link_to "SIGN OUT", logout_path, class: "sign-out" %>
-  </nav>
 
-  <h1 id="feed-title">Here's what the legislators for District 1 in Colorado have been saying ...</h1>
-  <!-- <h1 id="feed-title">Here's what Senator Degette has been discussing ...</h1> -->
+  <div id="feed-wrapper">
 
-  <!-- List of Legislators -->
-  <section id="legislators">
+    <nav id="main-nav">
+      <h1 id="logo">WHATCHU TALKIN' BOUT?</h1>
+      <%= link_to "SIGN OUT", logout_path, class: "sign-out" %>
+    </nav>
 
-    <!-- Senators -->
-    <section id="senators">
-      <h2>Senators Representing Colorado</h2>
-      <article class="senator">
-        <%= image_tag "" %>
-        <h3 class="name">Senator Cory Gardner</h3>
-        <%= link_to "See Senator Gardner's Recent Tweets...", "#" %>
-      </article>
+    <!-- List of Legislators -->
+    <section id="legislators">
 
-      <article class="senator">
-        <%= image_tag "" %>
-        <h3 class="name">Michael Bennet</h3>
-        <%= link_to "See Senator Bennet's Recent Tweets...", "#" %>
-      </article>
+      <!-- Senators -->
+      <section id="senators">
+        <h2>Senators for <span>Colorado</span></h2>
+        <article class="senator">
+          <%= image_tag "" %>
+          <h3 class="name">Senator Cory Gardner</h3>
+          <%= link_to "See Senator Gardner's Recent Tweets...", "#" %>
+        </article>
+
+        <article class="senator">
+          <%= image_tag "" %>
+          <h3 class="name">Senator Michael Bennet</h3>
+          <%= link_to "See Senator Bennet's Recent Tweets...", "#" %>
+        </article>
+      </section>
+
+      <!-- Representatives -->
+      <section id="representatives">
+        <h2>Representatives for <span>80202</span></h2>
+        <article class="representative">
+          <%= image_tag "" %>
+          <h3 class="name">Representative Diana DeGette</h3>
+          <%= link_to "See Representative DeGette's Recent Tweets...", "#" %>
+        </article>
+      </section>
+
+      <!-- Search For Different Legislators -->
+      <section id="search-area">
+        <h3>Find legislators for a different zip code</h3>
+        <form>
+          <input type="text">
+          <input type="submit" value="FIND LEGISLATORS">
+        </form>
+      </section>
     </section>
 
-    <!-- Representatives -->
-    <section id="representatives">
-      <h2>Representatives For 80202</h2>
-      <article class="representative">
+    <!-- Twitter Feed -->
+    <section id="feed">
+
+      <h2 id="feed-title">Here's what the legislators for Colorado's District 1 have been saying ...</h2>
+      <!-- <h1 id="feed-title">Here's what Senator Degette has been discussing ...</h1> -->
+
+      <article class="tweet-area">
         <%= image_tag "" %>
-        <h3 class="name">Representative Diana DeGette</h3>
-        <%= link_to "See Representative DeGette's Recent Tweets...", "#" %>
+        <h3 class="name">Rep. Diana DeGette</h3>
+        <%= link_to "@RepDianaDeGette", "#", class: "handle" %>
+        <span class="timestamp">2h</span>
+        <p class="tweet">Without you, Yogi Berra, the future sure ain't what it used to be.</p>
       </article>
+
+      <article class="tweet-area">
+        <%= image_tag "" %>
+        <h3 class="name">Rep. Diana DeGette</h3>
+        <%= link_to "@RepDianaDeGette", "#", class: "handle" %>
+        <span class="timestamp">3h</span>
+        <p class="tweet">OMG, like, tweets are suuuuper fun!</p>
+      </article>
+
+      <article class="tweet-area">
+        <%= image_tag "" %>
+        <h3 class="name">Rep. Diana DeGette</h3>
+        <%= link_to "@RepDianaDeGette", "#", class: "handle" %>
+        <span class="timestamp">4h</span>
+        <p class="tweet">Hmmmmm. *Tweet Tweet*</p>
+      </article>
+
     </section>
-
-    <!-- Search For Different Legislators -->
-    <section id="search-area">
-      <h2>Find legislators for a different zip code</h2>
-      <form>
-        <input type="text">
-        <input type="submit" value="FIND LEGISLATORS">
-      </form>
-    </section>
-  </section>
-
-  <!-- Twitter Feed -->
-  <section id="feed">
-
-    <article class="tweet-area">
-      <%= image_tag "" %>
-      <h3 class="name">Rep. Diana DeGette</h3>
-      <%= link_to "@RepDianaDeGette", "#", class: "handle" %>
-      <span class="timestamp">2h</span>
-      <p class="tweet">Without you, Yogi Berra, the future sure ain't what it used to be.</p>
-    </article>
-
-    <article class="tweet-area">
-      <%= image_tag "" %>
-      <h3 class="name">Rep. Diana DeGette</h3>
-      <%= link_to "@RepDianaDeGette", "#", class: "handle" %>
-      <span class="timestamp">3h</span>
-      <p class="tweet">OMG, like, tweets are suuuuper fun!</p>
-    </article>
-
-    <article class="tweet-area">
-      <%= image_tag "" %>
-      <h3 class="name">Rep. Diana DeGette</h3>
-      <%= link_to "@RepDianaDeGette", "#", class: "handle" %>
-      <span class="timestamp">4h</span>
-      <p class="tweet">Hmmmmm. *Tweet Tweet*</p>
-    </article>
-
-  </section>
+  </div>
 </div>
