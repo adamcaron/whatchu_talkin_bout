@@ -44,9 +44,17 @@
   background-color: rgba(1,31,33,.75);
 }
 
+#logo {
+  display: inline;
+  font-weight: 800;
+  font-size: 3em;
+  margin: 0;
+  color: #F4D03F;
+}
+
 // LANDING
 
-p#tagline {
+p#landing-tagline {
   color: #D2D7D3;
   font-weight: 400;
   border-radius: 10px;
@@ -84,11 +92,14 @@ a.sign-in, a.sign-in:visited, a.sign-in:link {
   color: white;
 }
 
-#logo {
-  display: inline;
+#landing-headline {
+  line-height: .9em;
+  margin: 150px 0 0 23%;
+  text-align: left;
+  // position: absolute;
+  // display: inline;
   font-weight: 800;
-  font-size: 3em;
-  margin: 0;
+  font-size: 6em;
   color: #F4D03F;
 }
 
