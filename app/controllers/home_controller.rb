@@ -3,6 +3,7 @@ class HomeController < ApplicationController
   end
 
   def welcome
+    render :landing unless current_user
   end
 
   def search_results
