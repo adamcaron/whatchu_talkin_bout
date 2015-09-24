@@ -12,7 +12,7 @@ RSpec.describe SunlightService, :type => :model do
       # assert post.keys.include?(:comments)
       # assert post.keys.include?(:likes)
       # assert post.keys.include?(:tags)
-      legislators = service.legislators_by_zip("80202")[:results]
+      legislators = service.legislators_by_zip(zip: "80202")
       legislator  = legislators.first
 
       assert legislator.keys.include?(:in_office)
