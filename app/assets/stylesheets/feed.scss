@@ -55,12 +55,56 @@
   -moz-border-radius: 10px;
   float: left;
   background-color: rgba(4, 37, 39, .7);
-  max-width: 60%;
+  max-width: 55%;
 }
 
 // LEGISLATOR AREA
-#senators, #representatives {
-  margin-bottom: 15px;
+
+.legislator {
+  position: relative;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  background-color: rgba(4, 27, 29, .7);
+  padding: 8px 20px;
+  height: 60px;
+  margin-bottom: 7px;
+  clear: left;
+}
+
+#legislators a {
+  bottom: 8px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  -moz-border-top-right-radius: 5px;
+  -moz-border-bottom-right-radius: 5px;
+  padding: 10px 16px 9px 1px;
+  color: #D2D7D3;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+#legislators a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+#legislators h3 {
+  display: inline;
+  font-size: 27px;
+  font-weight: 400;
+  color: #a6a8ab;
+  margin: 0 0 15px 0;
+}
+
+#legislators img {
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  margin-right: 19px;
+  display: block;
+  background-color: rgba(4, 37, 39, .7);
+  float: left;
+  height: 60px;
+  width: 60px;
 }
 
 #legislators h2 span {
@@ -70,7 +114,11 @@
 #legislators h2 {
   font-weight: 400;
   color: #477d7f;
-  margin: 5px 0 0 10px;
+  margin: 5px 0 13px 10px;
+}
+
+#senators, #representatives {
+  margin-bottom: 21px;
 }
 
 #legislators {
@@ -80,7 +128,7 @@
   -moz-border-radius: 10px;
   float: left;
   background-color: rgba(4, 37, 39, .7);
-  max-width: 33%;
+  width: 38%;
 }
 
 // GENERAL PAGE STYLES
