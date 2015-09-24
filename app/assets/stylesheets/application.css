@@ -19,3 +19,14 @@ input, buttom:focus { border: 0; outline:0; }
 a, a:visited, a:link {
   color: black;
 }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-repeat: no-repeat;
+  background-position: 55% -163px, center;
+  background-size: 200%;
+  background-image: url("capitol");
+  padding: 0;
+  margin: 0;
+  background-color: rgb(4, 27, 29);
+}
