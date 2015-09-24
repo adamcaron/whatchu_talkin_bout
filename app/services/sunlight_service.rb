@@ -10,6 +10,10 @@ class SunlightService
     parse(connection.get('legislators/locate', params))[:results]
   end
 
+  def legislators_by_latlong(params)
+    parse(connection.get('legislators/locate', params))[:results]
+  end
+
   private
 
   def parse(response)
