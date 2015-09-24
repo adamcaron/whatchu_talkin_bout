@@ -10,11 +10,21 @@
   margin: 0;
 }
 
+.timestamp {
+  float: right;
+  color: #9f9fa0;
+  font-size: 13px;
+}
+
 .handle, .handle:visited, .handle:link {
+  font-size: 13px;
+  text-decoration: none;
   color: rgba(4, 37, 39, .7);
 }
 
-.tweet h3.name {
+.name {
+  font-size: 16px;
+  display: inline;
   margin: 0;
 }
 
@@ -22,7 +32,6 @@
   border-radius:      5px;
   -moz-border-radius: 5px;
   margin-right: 15px;
-  // display: block;
   background-color: rgba(4, 37, 39, .7);
   float: left;
   height: 50px;
@@ -30,7 +39,6 @@
 }
 
 .tweet {
-
   padding: 10px;
   border-top: 1px solid #ccc;
   background-color: #dcdcdc;
@@ -49,7 +57,7 @@
   -moz-border-radius: 5px;
   float: left;
   background-color: #dcdcdc;
-  max-width: 55%;
+  max-width: 53%;
 }
 
 // LEGISLATOR AREA
@@ -65,15 +73,15 @@
   border-bottom-right-radius:      5px;
   -moz-border-top-right-radius:    5px;
   -moz-border-bottom-right-radius: 5px;
-  padding: 8px 20px;
+  padding: 12px 20px;
   font-size: 17px;
 }
 
 #search-area input[type="submit"]:hover {
   color: #EEEEEE;
   cursor: pointer;
-  background-color: #b77614;
-  // background-color: #b55858;
+  // background-color: #b77614;
+  background-color: #b55858;
   // background-color: #9B59B6;
 }
 
@@ -87,7 +95,7 @@
   -moz-border-top-left-radius:    5px;
   -moz-border-bottom-left-radius: 5px;
   font-size: 17px;
-  padding: 8px 20px;
+  padding: 12px 20px;
   // background-color: rgba(238,238,238, .6);
   background-color: #DCDCDC;
 }
@@ -97,12 +105,12 @@
   border-bottom-right-radius:      5px;
   -moz-border-bottom-left-radius:  5px;
   -moz-border-bottom-right-radius: 5px;
-  padding: 8px 20px;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: row;
   flex-direction: row;
-  opacity: .6;
+  padding: 12px 20px;
+  opacity: .9;
   // background-color: rgba(4, 27, 29, .7);
 }
 
@@ -160,7 +168,7 @@
 
 #legislators h3 {
   display: inline;
-  font-size: 27px;
+  font-size: 17px;
   font-weight: 400;
   color: #a6a8ab;
   margin: 0 0 15px 0;
@@ -170,7 +178,6 @@
   border-radius:      5px;
   -moz-border-radius: 5px;
   margin-right: 19px;
-  // display: block;
   background-color: rgba(4, 37, 39, .7);
   float: left;
   height: 60px;
@@ -184,7 +191,7 @@
 #legislators h2 {
   font-weight: 400;
   color: #477d7f;
-  margin: 5px 0 17px 10px;
+  margin: 0 0 17px 10px;
 }
 
 #senators, #representatives {
@@ -206,13 +213,15 @@
 a.sign-out, a.sign-out:visited, a.sign-out:link {
   margin-top: 16px;
   float: right;
-  color: #9B59B6;
+  color: #b55858;
+  // color: #9B59B6;
   font-size: 14px;
   text-decoration: none;
   padding: 8px 15px;
   border-radius:      5px;
   -moz-border-radius: 5px;
-  border: 2px solid #9B59B6;
+  border: 2px solid #b55858;
+  // border: 2px solid #9B59B6;
 }
 
 a.sign-out:hover {
