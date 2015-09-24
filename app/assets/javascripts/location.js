@@ -1,48 +1,44 @@
-// $('#element').load('sompage.html', function(){ /* callback */ });
-// $('#legislators').load('/feed', console.log('Hi there'));
-
-// function sayHi() {
-//   console.log('Hi there');
-// }
-
-
 $(".feed.show").ready(function(){
-  getLegislators()
+  getLegislatorsByLocation()
 })
 
-// $('#legislators').ready(function(){
-//   getLegislators()
-// })
-
-function getLegislators() {
-  getLocation()
-}
-
-function getLocation() {
-  var output = document.getElementById("out");
-
-  // if (!navigator.geolocation){
-  //   output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
-  //   return;
-  // }
-
-  function success(position) {
+function getLegislatorsByLocation() {
+  function successful(position) {
     var latitude  = position.coords.latitude;
     var longitude = position.coords.longitude;
 
-    output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
-
-    // var img = new Image();
-    // img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
-
-    // output.appendChild(img);
+    $.ajax({
+      type:    "GET",
+      url:     "http://congress.api.sunlightfoundation.com/legislators/locate?latitude="
+               + latitude
+               + "&longitude="
+               + longitude
+               + "&apikey=e12961d962b64b66b4ce180286f0e8a2",
+      success: function(legislators) {
+        $.each(legislators.results, function(index, legislator){
+          renderLegislator(legislator)
+        })
+      }
+    })
   };
 
-  function error() {
-    output.innerHTML = "Unable to retrieve your location";
-  };
+  navigator.geolocation.getCurrentPosition(successful);
+}
 
-  output.innerHTML = "<p>Locating…</p>";
-
-  navigator.geolocation.getCurrentPosition(success, error);
+function renderLegislator(legislator) {
+  $("#legislators").append(
+    "<article class='legislator senator'><h3 class='name'>"
+    + legislator.title
+    + " "
+    + legislator.first_name
+    + " "
+    + legislator.last_name
+    + "</h3><br><a href='#'>See "
+    + legislator.title
+    + " "
+    + legislator.first_name
+    + " "
+    + legislator.last_name
+    + "'s Recent Tweets...</a></article>"
+  );
 }
