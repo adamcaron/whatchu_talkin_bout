@@ -1,0 +1,260 @@
+// Place all the styles related to the feed controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+// FEED AREA
+
+.tweet p {
+  margin: 0;
+}
+
+.timestamp {
+  float: right;
+  color: #9f9fa0;
+  font-size: 13px;
+}
+
+.handle, .handle:visited, .handle:link {
+  font-size: 13px;
+  text-decoration: none;
+  color: rgba(4, 37, 39, .7);
+}
+
+.name {
+  font-size: 16px;
+  display: inline;
+  margin: 0;
+}
+
+.tweet img {
+  border-radius:      5px;
+  -moz-border-radius: 5px;
+  margin-right: 15px;
+  background-color: rgba(4, 37, 39, .7);
+  float: left;
+  height: 50px;
+  width: 50px;
+}
+
+.tweet {
+  min-height: 50px;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  background-color: #dcdcdc;
+}
+
+#feed h2 {
+  color: #477d7f;
+  font-weight: 400;
+  margin: 0;
+  padding: 10px;
+}
+
+#feed {
+  margin-bottom: 145px;
+  border-radius:      5px;
+  -moz-border-radius: 5px;
+  float: left;
+  background-color: #dcdcdc;
+  max-width: 53%;
+}
+
+// LEGISLATOR AREA
+
+#search-area input[type="submit"] {
+  float: right;
+  font-weight: 800;
+  color: #EEEEEE;
+  // background-color: #9B59B6;
+  // background-color: #9e4242;
+  background-color: #0b5259;
+  border-top-right-radius:         5px;
+  border-bottom-right-radius:      5px;
+  -moz-border-top-right-radius:    5px;
+  -moz-border-bottom-right-radius: 5px;
+  padding: 12px 20px;
+  font-size: 17px;
+}
+
+#search-area input[type="submit"]:hover {
+  color: #EEEEEE;
+  cursor: pointer;
+  // background-color: #b77614;
+  background-color: #b55858;
+  // background-color: #9B59B6;
+}
+
+#search-area input[type="text"] {
+  min-width: 55px;
+  -webkit-flex: auto;
+  flex: auto;
+  color: rgb(86, 90, 92);
+  border-top-left-radius:         5px;
+  border-bottom-left-radius:      5px;
+  -moz-border-top-left-radius:    5px;
+  -moz-border-bottom-left-radius: 5px;
+  font-size: 17px;
+  padding: 12px 20px;
+  // background-color: rgba(238,238,238, .6);
+  background-color: #DCDCDC;
+}
+
+#search-area form {
+  border-bottom-left-radius:       5px;
+  border-bottom-right-radius:      5px;
+  -moz-border-bottom-left-radius:  5px;
+  -moz-border-bottom-right-radius: 5px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  padding: 12px 0px 12px 10px;
+  opacity: .9;
+  // background-color: rgba(4, 27, 29, .7);
+}
+
+#search-area form:hover {
+  opacity: 1;
+}
+
+#search-area h2#search-title {
+  margin: 0;
+  border-top-left-radius:      5px;
+  border-top-right-radius:     5px;
+  -moz-border-top-left-radius: 5px;
+  -moz-border-top-left-radius: 5px;
+  color: #DDDDDD;
+  // background-color: #0b5259;
+  // background-color: rgba(4, 27, 29, .7);
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 19px;
+  padding: 0px 10px;
+}
+
+#search-area {
+  // margin-left: 55px;
+  margin-top: 45px;
+  // border-radius: 10px;
+  // -moz-border-radius: 10px;
+  // background-color: rgba(4, 27, 29, .7);
+}
+
+.legislator {
+  position: relative;
+  border-radius:      5px;
+  -moz-border-radius: 5px;
+  background-color: rgba(4, 27, 29, .7);
+  padding: 8px 10px;
+  height: 60px;
+  margin-bottom: 7px;
+  clear: left;
+}
+
+#legislators a {
+  bottom: 8px;
+  border-top-right-radius:         5px;
+  border-bottom-right-radius:      5px;
+  -moz-border-top-right-radius:    5px;
+  -moz-border-bottom-right-radius: 5px;
+  padding: 10px 16px 9px 1px;
+  color: #D2D7D3;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+#legislators a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+#legislators h3 {
+  display: inline;
+  font-size: 17px;
+  font-weight: 400;
+  color: #a6a8ab;
+  margin: 0 0 15px 0;
+}
+
+#legislators img {
+  border-radius:      5px;
+  -moz-border-radius: 5px;
+  margin-right: 19px;
+  background-color: rgba(4, 37, 39, .7);
+  float: left;
+  height: 60px;
+  width: 60px;
+}
+
+#legislators h2 span {
+  color: #7eaeaf;
+}
+
+#legislators h2 {
+  font-weight: 400;
+  color: #477d7f;
+  margin: 0 0 10px 0px;
+}
+
+#senators, #representatives {
+  margin-bottom: 25px;
+}
+
+#legislators {
+  padding: 10px;
+  margin-right: 15px;
+  border-radius:      5px;
+  -moz-border-radius: 5px;
+  float: left;
+  background-color: rgba(4, 37, 39, .7);
+  width: 38%;
+}
+
+// GENERAL PAGE STYLES
+
+a.sign-out, a.sign-out:visited, a.sign-out:link {
+  margin-top: 16px;
+  float: right;
+  color: #b55858;
+  // color: #9B59B6;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius:      5px;
+  -moz-border-radius: 5px;
+  border: 2px solid #b55858;
+  // border: 2px solid #9B59B6;
+}
+
+a.sign-out:hover {
+  color: white;
+  border: 2px solid white;
+}
+
+#logo {
+  color: #F4D03F;
+  font-size: 2.9em;
+  display: inline;
+  margin: 0;
+}
+
+#main-nav {
+  margin-bottom: 19px;
+  padding-top: 5px;
+}
+
+#feed-wrapper {
+
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+#feed-bg {
+  background-color: rgba(4, 37, 39, .5);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}

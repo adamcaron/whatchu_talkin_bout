@@ -1,0 +1,148 @@
+<div id="feed-bg">
+
+  <div id="feed-wrapper">
+
+    <nav id="main-nav">
+      <h1 id="logo">WHATCHU TALKIN' BOUT?</h1>
+      <%= link_to "SIGN OUT", logout_path, class: "sign-out" %>
+    </nav>
+
+    <!-- List of Legislators -->
+    <section id="legislators">
+
+      <!-- Senators -->
+      <section id="senators">
+        <h2>Senators from <span>Colorado</span></h2>
+        <article class="legislator senator">
+          <%= image_tag "" %>
+          <h3 class="name">Sen. Cory Gardner</h3>
+          <br>
+          <%= link_to "See Senator Gardner's Recent Tweets...", "#" %>
+        </article>
+
+        <article class="legislator senator">
+          <%= image_tag "" %>
+          <h3 class="name">Sen. Michael Bennet</h3>
+          <br>
+          <%= link_to "See Senator Bennet's Recent Tweets...", "#" %>
+        </article>
+      </section>
+
+      <!-- Representatives -->
+      <section id="representatives">
+        <h2>Representatives of <span>80202</span></h2>
+        <article class="legislator representative">
+          <%= image_tag "" %>
+          <h3 class="name">Rep. Diana DeGette</h3>
+          <br>
+          <%= link_to "See Representative DeGette's Recent Tweets...", "#" %>
+        </article>
+      </section>
+
+      <!-- Search For Different Legislators -->
+      <section id="search-area">
+        <h2 id="search-title">Find Legislators By Zip Code:</h2>
+        <form>
+          <input type="text">
+          <input type="submit" value="SEARCH">
+        </form>
+      </section>
+    </section>
+
+    <!-- Twitter Feed -->
+    <section id="feed">
+
+      <h2 id="feed-title">Here's what the legislators for Colorado's District 1 have been saying ...</h2>
+      <!-- <h1 id="feed-title">Here's what Senator Degette has been discussing ...</h1> -->
+
+      <article class="tweet">
+        <%= image_tag "" %>
+        <h3 class="name">Rep. Diana DeGette</h3>
+        <%= link_to "@RepDianaDeGette", "#", class: "handle" %>
+        <span class="timestamp">2h</span>
+        <p>Without you, Yogi Berra, the future sure ain't what it used to be.</p>
+      </article>
+
+      <article class="tweet">
+        <%= image_tag "" %>
+        <h3 class="name">Rep. Diana DeGette</h3>
+        <%= link_to "@RepDianaDeGette", "#", class: "handle" %>
+        <span class="timestamp">3h</span>
+        <p>OMG, like, tweets are suuuuper fun!</p>
+      </article>
+
+      <article class="tweet">
+        <%= image_tag "" %>
+        <h3 class="name">Rep. Diana DeGette</h3>
+        <%= link_to "@RepDianaDeGette", "#", class: "handle" %>
+        <span class="timestamp">4h</span>
+        <p>Hmmmmm. *Tweet Tweet*</p>
+      </article>
+
+      <article class="tweet">
+        <%= image_tag "" %>
+        <h3 class="name">Rep. Diana DeGette</h3>
+        <%= link_to "@RepDianaDeGette", "#", class: "handle" %>
+        <span class="timestamp">2h</span>
+        <p>Without you, Yogi Berra, the future sure ain't what it used to be.</p>
+      </article>
+
+      <article class="tweet">
+        <%= image_tag "" %>
+        <h3 class="name">Rep. Diana DeGette</h3>
+        <%= link_to "@RepDianaDeGette", "#", class: "handle" %>
+        <span class="timestamp">3h</span>
+        <p>OMG, like, tweets are suuuuper fun!</p>
+      </article>
+
+      <article class="tweet">
+        <%= image_tag "" %>
+        <h3 class="name">Rep. Diana DeGette</h3>
+        <%= link_to "@RepDianaDeGette", "#", class: "handle" %>
+        <span class="timestamp">4h</span>
+        <p>Hmmmmm. *Tweet Tweet*</p>
+      </article>
+
+      <article class="tweet">
+        <%= image_tag "" %>
+        <h3 class="name">Rep. Diana DeGette</h3>
+        <%= link_to "@RepDianaDeGette", "#", class: "handle" %>
+        <span class="timestamp">2h</span>
+        <p>Without you, Yogi Berra, the future sure ain't what it used to be.</p>
+      </article>
+
+      <article class="tweet">
+        <%= image_tag "" %>
+        <h3 class="name">Rep. Diana DeGette</h3>
+        <%= link_to "@RepDianaDeGette", "#", class: "handle" %>
+        <span class="timestamp">3h</span>
+        <p>OMG, like, tweets are suuuuper fun!</p>
+      </article>
+
+      <article class="tweet">
+        <%= image_tag "" %>
+        <h3 class="name">Rep. Diana DeGette</h3>
+        <%= link_to "@RepDianaDeGette", "#", class: "handle" %>
+        <span class="timestamp">4h</span>
+        <p>Hmmmmm. *Tweet Tweet*</p>
+      </article>
+
+      <article class="tweet">
+        <%= image_tag "" %>
+        <h3 class="name">Rep. Diana DeGette</h3>
+        <%= link_to "@RepDianaDeGette", "#", class: "handle" %>
+        <span class="timestamp">2h</span>
+        <p>Without you, Yogi Berra, the future sure ain't what it used to be.</p>
+      </article>
+
+      <article class="tweet">
+        <%= image_tag "" %>
+        <h3 class="name">Rep. Diana DeGette</h3>
+        <%= link_to "@RepDianaDeGette", "#", class: "handle" %>
+        <span class="timestamp">3h</span>
+        <p>OMG, like, tweets are suuuuper fun!</p>
+      </article>
+
+    </section>
+  </div>
+</div>
