@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Legislator, type: :model do
-
   it "has access to the Sunlight service" do
     service = Legislator.service
 
