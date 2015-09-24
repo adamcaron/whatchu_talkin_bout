@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 gem 'rails', '4.2.3'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
@@ -11,6 +10,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'figaro'
 gem 'omniauth-twitter'
+gem 'hurley'
 
 group :development, :test do
   gem 'byebug'
@@ -24,5 +24,10 @@ group :development, :test do
   gem 'simplecov'
   gem 'database_cleaner'
   gem 'awesome_print'
+end
+
+group :test do
+  gem 'vcr'
+  gem 'webmock'
 end
 
