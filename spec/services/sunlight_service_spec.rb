@@ -5,7 +5,7 @@ RSpec.describe SunlightService, :type => :model do
 
   it "returns legislators by zip code" do
     VCR.use_cassette('sunlight_service_test#returns_legislators_by_zip_code') do
-      legislators = service.legislators_by_zip(zip: "80202")
+      legislators = service.legislators(zip: "80202")
       legislator  = legislators.first
 
       assert legislator.keys.include?(:in_office)
@@ -19,7 +19,7 @@ RSpec.describe SunlightService, :type => :model do
 
   it "returns legislators by lat / long location" do
     VCR.use_cassette('sunlight_service_test#returns_legislators_by_lat_long') do
-      legislators = service.legislators_by_latlong(latitude: "39.7256539", longitude: "-104.9653993")
+      legislators = service.legislators(latitude: "39.7256539", longitude: "-104.9653993")
       legislator  = legislators.first
 
       assert legislator.keys.include?(:in_office)

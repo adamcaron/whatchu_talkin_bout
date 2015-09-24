@@ -6,11 +6,7 @@ class SunlightService
     connection.query[:apikey] = ENV['sunlight_api_key']
   end
 
-  def legislators_by_zip(params)
-    parse(connection.get('legislators/locate', params))[:results]
-  end
-
-  def legislators_by_latlong(params)
+  def legislators(params)
     parse(connection.get('legislators/locate', params))[:results]
   end
 
