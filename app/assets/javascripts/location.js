@@ -8,8 +8,8 @@ function getLegislatorsByLocation() {
     var longitude = position.coords.longitude;
 
     $.ajax({
-      type:    "GET",
-      url:     "http://congress.api.sunlightfoundation.com/legislators/locate?latitude="
+         type: "GET",
+          url: "http://congress.api.sunlightfoundation.com/legislators/locate?latitude="
                + latitude
                + "&longitude="
                + longitude
@@ -26,7 +26,7 @@ function getLegislatorsByLocation() {
 }
 
 function renderLegislator(legislator) {
-  $("#legislators").append(
+  $("#search-area").before(
     "<article class='legislator senator'><h3 class='name'>"
     + legislator.title
     + " "
