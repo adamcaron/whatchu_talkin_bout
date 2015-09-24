@@ -6,15 +6,31 @@
 
 // FEED AREA
 
-.tweet-area p {
+.tweet p {
   margin: 0;
 }
 
-.tweet-area h3 {
+.handle, .handle:visited, .handle:link {
+  color: rgba(4, 37, 39, .7);
+}
+
+.tweet h3.name {
   margin: 0;
 }
 
-.tweet-area {
+.tweet img {
+  border-radius:      5px;
+  -moz-border-radius: 5px;
+  margin-right: 15px;
+  // display: block;
+  background-color: rgba(4, 37, 39, .7);
+  float: left;
+  height: 50px;
+  width: 50px;
+}
+
+.tweet {
+
   padding: 10px;
   border-top: 1px solid #ccc;
   background-color: #dcdcdc;
@@ -28,12 +44,11 @@
 }
 
 #feed {
-  // margin-top: 55px;
+  margin-bottom: 145px;
   border-radius:      5px;
   -moz-border-radius: 5px;
   float: left;
   background-color: #dcdcdc;
-  // background-color: rgba(4, 37, 39, .7);
   max-width: 55%;
 }
 
@@ -155,7 +170,7 @@
   border-radius:      5px;
   -moz-border-radius: 5px;
   margin-right: 19px;
-  display: block;
+  // display: block;
   background-color: rgba(4, 37, 39, .7);
   float: left;
   height: 60px;
@@ -218,6 +233,7 @@ a.sign-out:hover {
 }
 
 #feed-wrapper {
+
   padding: 0 20px;
   margin: 0 auto;
   max-width: 1400px;

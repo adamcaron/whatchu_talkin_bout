@@ -22,11 +22,11 @@ a, a:visited, a:link {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  /* background-position: 55% 14%, center; */
+  background-repeat: no-repeat;
   background-position: 55% -163px, center;
   background-size: 200%;
   background-image: url("capitol");
   padding: 0;
   margin: 0;
-  background-color: rgb(4, 37, 39);
+  background-color: rgb(4, 27, 29);
 }
