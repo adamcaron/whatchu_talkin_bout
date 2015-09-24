@@ -39,6 +39,7 @@
 }
 
 .tweet {
+  min-height: 50px;
   padding: 10px;
   border-top: 1px solid #ccc;
   background-color: #dcdcdc;
@@ -109,7 +110,7 @@
   display: flex;
   -webkit-flex-direction: row;
   flex-direction: row;
-  padding: 12px 20px;
+  padding: 12px 0px 12px 10px;
   opacity: .9;
   // background-color: rgba(4, 27, 29, .7);
 }
@@ -127,12 +128,15 @@
   color: #DDDDDD;
   // background-color: #0b5259;
   // background-color: rgba(4, 27, 29, .7);
-  // font-weight: 800;
+  text-transform: uppercase;
+  font-weight: 800;
   font-size: 19px;
-  padding: 0px 20px;
+  padding: 0px 10px;
 }
 
 #search-area {
+  // margin-left: 55px;
+  margin-top: 45px;
   // border-radius: 10px;
   // -moz-border-radius: 10px;
   // background-color: rgba(4, 27, 29, .7);
@@ -143,7 +147,7 @@
   border-radius:      5px;
   -moz-border-radius: 5px;
   background-color: rgba(4, 27, 29, .7);
-  padding: 8px 20px;
+  padding: 8px 10px;
   height: 60px;
   margin-bottom: 7px;
   clear: left;
@@ -191,7 +195,7 @@
 #legislators h2 {
   font-weight: 400;
   color: #477d7f;
-  margin: 0 0 17px 10px;
+  margin: 0 0 10px 0px;
 }
 
 #senators, #representatives {
