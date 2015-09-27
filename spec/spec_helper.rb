@@ -34,28 +34,32 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 
-  # def login_user!
-  #   OmniAuth.config.test_mode = true
+  def login_user!
+    OmniAuth.config.test_mode = true
 
-  #   OmniAuth.config.mock_auth[:instagram] = OmniAuth::AuthHash.new(
-  #     {
-  #       "provider"    => "instagram",
-  #       "uid"         => "1644186282",
-  #       "info"        => {
-  #         "nickname"    => "adamcaron_",
-  #         "name"        => "Adam Caron",
-  #         "image"       => "https://igcdn-photos-a-a.akamaihd.net/hphotos-ak-xaf1/t51.2885-19/s150x150/11326500_497479217082584_1106824622_a.jpg",
-  #         "bio"         => "NH🍁 -> CO🌲",
-  #         "website"     => ""
-  #       },
-  #       "credentials" => {
-  #         "token"       => Figaro.env.APP_OWNER_IG_TOKEN,
-  #         "expires"     => false
-  #       },
-  #       "extra"       => {}
-  #     }
-  #   )
-  # end
+    OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new(
+      {
+        "provider"=>"twitter",
+        "uid"=>"2975056012",
+        "info"=>
+        {
+          "nickname"=>"adamcaron_",
+          "name"=>"Adam Caron",
+          "email"=>nil,
+          "location"=>"Denver, CO",
+          "image"=>"http://pbs.twimg.com/profile_images/634476865172828161/_CNlNT--_normal.jpg",
+          "description"=>"Developer and Designer of Software;\nLover of anything that benefits people",
+          "urls"=> {
+            "Website"=>nil,
+            "Twitter"=>"https://twitter.com/adamcaron_"
+          }
+        },
+        "credentials"=> {
+          "token"=>"2975056012-JP1tm5dsc3wrsxhBFMAk8v4RmcNewtLmEEhXDuu"
+        }
+      }
+    )
+  end
 
   # def create_user!
   #   user = User.create!( name: "Adam",
