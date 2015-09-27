@@ -5,8 +5,6 @@ class SessionsController < ApplicationController
     if user
       session[:user_id] = user.id
       redirect_to feed_path
-    else
-      redirect_to root_path
     end
   end
 
