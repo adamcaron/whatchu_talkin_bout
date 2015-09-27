@@ -55,22 +55,11 @@ RSpec.configure do |config|
           }
         },
         "credentials"=> {
-          "token"=>"2975056012-JP1tm5dsc3wrsxhBFMAk8v4RmcNewtLmEEhXDuu"
+          "token"=> Figaro.env.APP_OWNER_TWITTER_TOKEN
         }
       }
     )
   end
-
-  # def create_user!
-  #   user = User.create!( name: "Adam",
-  #                       image: "http://asdf.com",
-  #                         bio: "asdf",
-  #                     website: "whatever.com",
-  #                       token: Figaro.env.APP_OWNER_IG_TOKEN,
-  #                    provider: "Instagram",
-  #                         uid: "10")
-  #   user
-  # end
 
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true

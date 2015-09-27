@@ -21,7 +21,7 @@ RSpec.describe User, type: :model do
           }
         },
         "credentials"=> {
-          "token"=>"2975056012-JP1tm5dsc3wrsxhBFMAk8v4RmcNewtLmEEhXDuu"
+          "token"=> Figaro.env.APP_OWNER_TWITTER_TOKEN
         }
       }
     )
