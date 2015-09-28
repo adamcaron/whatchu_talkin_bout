@@ -1,4 +1,4 @@
-$(".feed.show").ready(function(){
+$( ".feed.show" ).ready(function(){
   getLegislatorsByLocation()
 })
 
@@ -15,7 +15,7 @@ function getLegislatorsByLocation() {
                + longitude
                + "&apikey=e12961d962b64b66b4ce180286f0e8a2",
       success: function(legislators) {
-        $.each(legislators.results, function(index, legislator){
+        $.each( legislators.results, function(index, legislator) {
           renderLegislator(legislator)
         })
       }
@@ -26,7 +26,7 @@ function getLegislatorsByLocation() {
 }
 
 function renderLegislator(legislator) {
-  $("#search-area").before(
+  $( "#search-area" ).before(
     "<article class='legislator senator'><h3 class='name'>"
     + legislator.title
     + " "

@@ -4,7 +4,7 @@
 
     <nav id="main-nav">
       <h1 id="logo">WHATCHU TALKIN' BOUT?</h1>
-      <%= link_to "SIGN OUT", logout_path, class: "sign-out" %>
+      <%= link_to "Sign Out", logout_path, class: "sign-out" %>
     </nav>
 
     <!-- List of Legislators -->
@@ -44,8 +44,8 @@
       <section id="search-area">
         <h2 id="search-title">Find Legislators By Zip Code:</h2>
         <form>
-          <input type="text">
-          <input type="submit" value="SEARCH">
+          <input id="search-input" type="text" placeholder="Enter a zip code">
+          <input id="search-submit" type="submit" value="SEARCH">
         </form>
         <span id="message-area" style="color: red;"></span>
       </section>
