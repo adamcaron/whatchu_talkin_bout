@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
     user.location    = data.info.location
     user.provider    = data.provider
     user.token       = data.credentials.token
+    user.secret      = data.credentials.secret
     user.uid         = data.uid
     user.image       = data.info.image
     user.description = data.info.description

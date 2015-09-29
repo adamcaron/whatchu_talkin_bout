@@ -11,6 +11,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'figaro'
 gem 'omniauth-twitter'
 gem 'hurley'
+gem 'twitter'
 
 group :development, :test do
   gem 'byebug'
@@ -31,3 +32,6 @@ group :test do
   gem 'webmock'
 end
 
+group :production do
+gem 'rails_12factor'
+end
