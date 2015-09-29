@@ -1,0 +1,94 @@
+$(".feed.show").ready(function(){
+  getLegislatorsByLocation()
+})
+
+function getLegislatorsByLocation() {
+  function postitionSuccessCallback(position) {
+    var latitude  = position.coords.latitude;
+    var longitude = position.coords.longitude;
+
+    $.ajax({
+      type: "GET",
+      url:  "http://congress.api.sunlightfoundation.com/legislators/locate?latitude="
+            + latitude
+            + "&longitude="
+            + longitude
+            + "&apikey=e12961d962b64b66b4ce180286f0e8a2",
+      success: function(legislators) {
+        // Display the loading message
+        $( "#feed-title" ).text(
+          "Getting Tweets ..."
+        )
+
+        // Display the legislators
+        $.each(legislators.results, function(index, legislator){
+          renderLegislator(legislator)
+        })
+
+        // Get their Twitter accounts
+        var legislatorTwitterAccounts = []
+        $.each(legislators.results, function(index, legislator){
+          legislatorTwitterAccounts.push(legislator.twitter_id)
+        })
+
+        // Get a combined Twitter feed using their Twitter handles
+        getCombinedTwitterFeed(legislatorTwitterAccounts)
+      }
+    })
+  };
+  navigator.geolocation.getCurrentPosition(postitionSuccessCallback);
+}
+
+function getCombinedTwitterFeed(legislatorTwitterHandles) {
+  $.ajax({
+    type: "GET",
+    url:  "/combined_feed",
+    data: {
+      number_of_tweets: 9,
+      legislator_twitter_handles: legislatorTwitterHandles
+      },
+    success: function(tweets) {
+      $( "#feed-title" ).text(
+        "Here\'s what your legislators have been saying:"
+        )
+
+      $.each(tweets, function(index, tweet){
+        renderTweet(tweet)
+      })
+    }
+  })
+}
+
+function renderTweet(tweet){
+  $( "#feed" ).append(
+    "<article class='tweet'><img src='"
+    + tweet.profile_img
+    + "' /><h3 class='name'>"
+    + tweet.user_name
+    + "</h3><a class='handle' href='"
+    + tweet.profile_url
+    + "'>"
+    + tweet.user_handle
+    + "<p>"
+    + tweet.text
+    + "</p></article>"
+    )
+}
+
+function renderLegislator(legislator) {
+  $("#search-area").before(
+    "<article class='legislator senator'><h3 class='name'>"
+    + legislator.title
+    + " "
+    + legislator.first_name
+    + " "
+    + legislator.last_name
+    + "</h3><br><a href='#'>See "
+    + legislator.title
+    + " "
+    + legislator.first_name
+    + " "
+    + legislator.last_name
+    + "'s Recent Tweets...</a></article>"
+    )
+}
