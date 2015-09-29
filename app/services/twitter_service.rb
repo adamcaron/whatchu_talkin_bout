@@ -10,7 +10,9 @@ class TwitterService
     end
   end
 
-  def combined_feed
-    connection.search("from:SenBennetCo OR from:RepDianaDeGette OR from:SenCoryGardner", result_type: "recent").to_h
+  def combined_feed(legislators)
+    # format the legislators' Twitter handles, then request their tweets
+    handles = legislators.map { |l| "from:#{l}" }.join(" OR ")
+    connection.search( handles, result_type: "recent" ).to_h
   end
 end

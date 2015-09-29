@@ -4,7 +4,8 @@ class FeedController < ApplicationController
   end
 
   def combined_feed
-    number_of_tweets = params[:number_of_tweets]
-    render json: Feed.combined_feed(number_of_tweets)
+    feed_length = params[:number_of_tweets]
+    legislators = params[:legislator_twitter_handles]
+    render json: Feed.combined_feed(feed_length, legislators)
   end
 end

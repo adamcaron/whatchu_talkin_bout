@@ -3,17 +3,17 @@ $(".feed.show").ready(function(){
 })
 
 function getLegislatorsByLocation() {
-  function successful(position) {
+  function postitionSuccessCallback(position) {
     var latitude  = position.coords.latitude;
     var longitude = position.coords.longitude;
 
     $.ajax({
-         type: "GET",
-          url: "http://congress.api.sunlightfoundation.com/legislators/locate?latitude="
-               + latitude
-               + "&longitude="
-               + longitude
-               + "&apikey=e12961d962b64b66b4ce180286f0e8a2",
+      type: "GET",
+      url:  "http://congress.api.sunlightfoundation.com/legislators/locate?latitude="
+            + latitude
+            + "&longitude="
+            + longitude
+            + "&apikey=e12961d962b64b66b4ce180286f0e8a2",
       success: function(legislators) {
         $( "#feed-title" ).text(
           "Getting Tweets ..."
@@ -24,7 +24,6 @@ function getLegislatorsByLocation() {
         })
 
         var legislatorTwitterAccounts = []
-
         $.each(legislators.results, function(index, legislator){
           legislatorTwitterAccounts.push(legislator.twitter_id)
         })
@@ -34,22 +33,17 @@ function getLegislatorsByLocation() {
       }
     })
   };
-
-  navigator.geolocation.getCurrentPosition(successful);
+  navigator.geolocation.getCurrentPosition(postitionSuccessCallback);
 }
 
-function getCombinedTwitterFeed(legislatorTwitterAccounts) {
+function getCombinedTwitterFeed(legislatorTwitterHandles) {
   $.ajax({
-       type: "GET",
-        url: "/combined_feed",
-       data: { number_of_tweets: 9 },
-        // + senbennetco
-        // + "+OR+%40"
-        // + repdianadegette
-        // + "&oauth_consumer_key="
-        // + consumer_key
-        // + "&oauth_token="
-        // + access_token,
+    type: "GET",
+    url:  "/combined_feed",
+    data: {
+      number_of_tweets: 9,
+      legislator_twitter_handles: legislatorTwitterHandles
+      },
     success: function(tweets) {
       $( "#feed-title" ).text(
         "Here\'s what your legislators have been saying:"
