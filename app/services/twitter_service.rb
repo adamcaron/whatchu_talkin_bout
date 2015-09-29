@@ -11,8 +11,6 @@ class TwitterService
   end
 
   def combined_feed
-    connection.search("SenBennetCo OR RepDianaDeGette OR SenCoryGardner", result_type: "recent").take(9).each do |tweet|
-      puts tweet.text
-    end
+    connection.search("from:SenBennetCo OR from:RepDianaDeGette OR from:SenCoryGardner", result_type: "recent").to_h
   end
 end
