@@ -15,6 +15,10 @@ function getLegislatorsByLocation() {
                + longitude
                + "&apikey=e12961d962b64b66b4ce180286f0e8a2",
       success: function(legislators) {
+        $( "#feed-title" ).text(
+          "Getting Tweets ..."
+        )
+
         $.each(legislators.results, function(index, legislator){
           renderLegislator(legislator)
         })
@@ -47,6 +51,10 @@ function getCombinedTwitterFeed(legislatorTwitterAccounts) {
         // + "&oauth_token="
         // + access_token,
     success: function(tweets) {
+      $( "#feed-title" ).text(
+        "Here\'s what your legislators have been saying:"
+        )
+
       $.each(tweets, function(index, tweet){
         renderTweet(tweet)
       })
@@ -55,7 +63,6 @@ function getCombinedTwitterFeed(legislatorTwitterAccounts) {
 }
 
 function renderTweet(tweet){
-    // debugger;
   $( "#feed" ).append(
     "<article class='tweet'><img src='"
     + tweet.profile_img
@@ -68,7 +75,7 @@ function renderTweet(tweet){
     + "<p>"
     + tweet.text
     + "</p></article>"
-  )
+    )
 }
 
 function renderLegislator(legislator) {
@@ -86,5 +93,5 @@ function renderLegislator(legislator) {
     + " "
     + legislator.last_name
     + "'s Recent Tweets...</a></article>"
-  );
+    )
 }
