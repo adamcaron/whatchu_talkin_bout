@@ -32,3 +32,6 @@ group :test do
   gem 'webmock'
 end
 
+group :production do
+gem 'rails_12factor'
+end
