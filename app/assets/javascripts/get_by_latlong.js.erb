@@ -15,21 +15,24 @@ function getLegislatorsByLocation() {
             + longitude
             + "&apikey=e12961d962b64b66b4ce180286f0e8a2",
       success: function(legislators) {
+        // Display the loading message
         $( "#feed-title" ).text(
           "Getting Tweets ..."
         )
 
+        // Display the legislators
         $.each(legislators.results, function(index, legislator){
           renderLegislator(legislator)
         })
 
+        // Get their Twitter accounts
         var legislatorTwitterAccounts = []
         $.each(legislators.results, function(index, legislator){
           legislatorTwitterAccounts.push(legislator.twitter_id)
         })
 
+        // Get a combined Twitter feed using their Twitter handles
         getCombinedTwitterFeed(legislatorTwitterAccounts)
-
       }
     })
   };
