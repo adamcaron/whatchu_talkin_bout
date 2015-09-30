@@ -1,8 +1,7 @@
 require 'simplecov'
-SimpleCov.start 'rails'
-
 require 'webmock'
 require 'vcr'
+SimpleCov.start 'rails'
 
 VCR.configure do |config|
   config.cassette_library_dir = "spec/cassettes"
@@ -55,7 +54,8 @@ RSpec.configure do |config|
           }
         },
         "credentials"=> {
-          "token"=> Figaro.env.APP_OWNER_TWITTER_TOKEN
+          "token"=>  ENV["TWITTER_ACCESS_TOKEN"],
+          "secret"=> ENV["TWITTER_ACCESS_TOKEN_SECRET"]
         }
       }
     )
