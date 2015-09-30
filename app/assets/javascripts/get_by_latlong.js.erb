@@ -1,4 +1,4 @@
-$(".feed.show").ready(function(){
+$( ".feed.show" ).ready(function(){
   getLegislatorsByLocation()
 })
 
@@ -45,7 +45,7 @@ function getCombinedTwitterFeed(legislatorTwitterHandles) {
     type: "GET",
     url:  "/combined_feed",
     data: {
-      number_of_tweets: 9,
+      number_of_tweets: 13,
       legislator_twitter_handles: legislatorTwitterHandles
       },
     success: function(tweets) {
@@ -72,6 +72,7 @@ function renderTweet(tweet){
     + tweet.profile_url
     + "'>"
     + tweet.user_handle
+    + "</a>"
     + "<p>"
     + tweet.text
     + "</p></article>"
@@ -79,8 +80,10 @@ function renderTweet(tweet){
 }
 
 function renderLegislator(legislator) {
-  $("#legislators").append(
-    "<article class='legislator senator'><h3 class='name'>"
+  $( "#legislators" ).append(
+    "<article class='legislator' data-twitter-handle='"
+    + legislator.twitter_id
+    + "'><h3 class='name'>"
     + legislator.title
     + " "
     + legislator.first_name
