@@ -29,7 +29,7 @@ RSpec.describe FeedController, type: :controller do
 
   scenario "#individual_feed" do
     VCR.use_cassette("feed_controller#individual_feed") do
-      get :individual_feed,
+      get :combined_feed,
             format:      :json,
             feed_length: 9,
             handle:     "RepDianaDeGette"

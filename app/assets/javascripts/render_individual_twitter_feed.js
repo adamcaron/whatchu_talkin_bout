@@ -9,8 +9,7 @@ $(document).ready(function(){
 function getIndividualTwitterFeed(legislatorName, handle){
   $.ajax({
     type: "GET",
-    // url:  "/individual_feed",
-    url: "/combined_feed",
+    url: "/feed/create",
     data: { handles: handle, feed_length: 13 },
     success: function(tweets) {
 

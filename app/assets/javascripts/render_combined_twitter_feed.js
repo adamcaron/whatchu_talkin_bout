@@ -12,7 +12,7 @@ function renderCombinedTwitterFeed(legislators){
   // Request the Tweets
   $.ajax({
     type: "GET",
-    url:  "/combined_feed",
+    url:  "/feed/create",
     data: { handles: legislatorTwitterHandles, feed_length: 13 },
     success: function(tweets) {
 

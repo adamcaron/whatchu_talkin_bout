@@ -10,12 +10,8 @@ class TwitterService
     end
   end
 
-  def combined_feed(legislators)
+  def create_feed(legislators)
     handles = legislators.map { |l| "from:#{l}" }.join(" OR ")
     connection.search( handles, result_type: "recent" ).to_h
   end
-
-  # def individual_feed(legislator)
-  #   connection.search( "from:#{legislator}", result_type: "recent" ).to_h
-  # end
 end
