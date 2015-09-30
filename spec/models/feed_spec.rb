@@ -22,9 +22,9 @@ RSpec.describe Feed, type: :model do
         end
       end
 
-      context "self.combined_feed" do
-        it "responds with " do
-          VCR.use_cassette('feed#create') do
+      context "self.create" do
+        it "responds with a combined feed when multiple legislators are passed" do
+          VCR.use_cassette('feed#create_combined_feed') do
             feed = Feed.create(["SenCoryGardner", "RepDianaDeGette", "SenBennetCo"], 9)
 
             expect(feed.count).to be(9)
@@ -37,25 +37,24 @@ RSpec.describe Feed, type: :model do
               :@text])
           end
         end
+
+        it "responds with an individual feed when one legislator is passed" do
+          VCR.use_cassette('feed#create_individual_feed') do
+            feed = Feed.create(["RepDianaDeGette"], 9)
+
+            expect(feed.count).to be(9)
+            expect(feed.first.class).to be(Tweet)
+            expect(feed.first.instance_variables).to eq([
+              :@profile_img,
+              :@user_name,
+              :@user_handle,
+              :@profile_url,
+              :@text])
+            expect(feed.each { |tweet| tweet.user_handle == "RepDianaDeGette" })
+          end
+        end
       end
 
-    #   context "self.individual_feed" do
-    #     it "responds with " do
-    #       VCR.use_cassette('feed#individual_feed') do
-    #         feed = Feed.individual_feed("RepDianaDeGette", 9)
-
-    #         expect(feed.count).to be(9)
-    #         expect(feed.first.class).to be(Tweet)
-    #         expect(feed.first.instance_variables).to eq([
-    #           :@profile_img,
-    #           :@user_name,
-    #           :@user_handle,
-    #           :@profile_url,
-    #           :@text])
-    #         expect(feed.each { |tweet| tweet.user_handle == "RepDianaDeGette" })
-    #       end
-    #     end
-    #   end
     end
 
   end

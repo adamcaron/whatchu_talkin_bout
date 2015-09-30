@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx/1.1.19
       Date:
-      - Wed, 30 Sep 2015 23:24:09 GMT
+      - Wed, 30 Sep 2015 23:41:57 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -39,5 +39,5 @@ http_interactions:
         Rayburn House Office Building","party":"D","phone":"202-225-4431","state":"CO","state_name":"Colorado","term_end":"2017-01-03","term_start":"2015-01-06","thomas_id":"01479","title":"Rep","twitter_id":"RepDianaDeGette","votesmart_id":561,"website":"http://degette.house.gov","youtube_id":"RepDianaDeGette"},{"bioguide_id":"B001267","birthday":"1964-11-28","chamber":"senate","contact_form":"http://www.bennet.senate.gov/contact/email","crp_id":"N00030608","district":null,"facebook_id":"97172997732","fax":"202-228-5036","fec_ids":["S0CO00211"],"first_name":"Michael","gender":"M","govtrack_id":"412330","icpsr_id":40910,"in_office":true,"last_name":"Bennet","lis_id":"S330","middle_name":"F.","name_suffix":null,"nickname":null,"oc_email":"Sen.Bennet@opencongress.org","ocd_id":"ocd-division/country:us/state:co","office":"261
         Russell Senate Office Building","party":"D","phone":"202-224-5852","senate_class":3,"state":"CO","state_name":"Colorado","state_rank":"senior","term_end":"2017-01-03","term_start":"2011-01-05","thomas_id":"01965","title":"Sen","twitter_id":"SenBennetCo","votesmart_id":110942,"website":"http://www.bennet.senate.gov","youtube_id":"SenatorBennet"}],"count":3,"page":{"count":3,"per_page":20,"page":1}}'
     http_version: 
-  recorded_at: Wed, 30 Sep 2015 23:24:11 GMT
+  recorded_at: Wed, 30 Sep 2015 23:42:00 GMT
 recorded_with: VCR 2.9.3
