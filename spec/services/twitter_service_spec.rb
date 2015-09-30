@@ -7,7 +7,7 @@ RSpec.describe TwitterService, :type => :model do
     VCR.use_cassette('twitter_service_test#returns_a_feed_of_tweets') do
       legislators = ["SenCoryGardner", "RepDianaDeGette", "SenBennetCo"]
 
-      response = service.combined_feed(legislators)
+      response = service.create_feed(legislators)
 
       tweet    = response[:statuses].first
       user     = response[:statuses].first[:user]
