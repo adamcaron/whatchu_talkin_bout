@@ -12,9 +12,9 @@ http_interactions:
       User-Agent:
       - TwitterRubyGem/5.15.0
       Authorization:
-      - OAuth oauth_consumer_key="qlqMJiVlkAAiaoie7Dy5hgpkr", oauth_nonce="dcf112a9167e937313872a68329c1618",
-        oauth_signature="BzoXdtctc3dEv1MV2YHbpT8rJvo%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1443630465", oauth_token="2975056012-JP1tm5dsc3wrsxhBFMAk8v4RmcNewtLmEEhXDuu",
+      - OAuth oauth_consumer_key="qlqMJiVlkAAiaoie7Dy5hgpkr", oauth_nonce="231ecb3a41acbf413de4e31ad40f9fda",
+        oauth_signature="%2F4Pe7hDyCJsEJTxOAU%2BnrRXoazw%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1443630466", oauth_token="2975056012-JP1tm5dsc3wrsxhBFMAk8v4RmcNewtLmEEhXDuu",
         oauth_version="1.0"
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -28,22 +28,22 @@ http_interactions:
       Content-Disposition:
       - attachment; filename=json.json
       Content-Length:
-      - '29892'
+      - '29894'
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Wed, 30 Sep 2015 16:27:44 GMT
+      - Wed, 30 Sep 2015 16:27:45 GMT
       Expires:
       - Tue, 31 Mar 1981 05:00:00 GMT
       Last-Modified:
-      - Wed, 30 Sep 2015 16:27:44 GMT
+      - Wed, 30 Sep 2015 16:27:45 GMT
       Pragma:
       - no-cache
       Server:
       - tsa_a
       Set-Cookie:
-      - guest_id=v1%3A144363046441830507; Domain=.twitter.com; Path=/; Expires=Fri,
-        29-Sep-2017 16:27:44 UTC
+      - guest_id=v1%3A144363046524828302; Domain=.twitter.com; Path=/; Expires=Fri,
+        29-Sep-2017 16:27:45 UTC
       - lang=en; Path=/
       Status:
       - 200 OK
@@ -52,7 +52,7 @@ http_interactions:
       X-Access-Level:
       - read-write
       X-Connection-Hash:
-      - 0fba00b913f3acd82ee7548b575a1555
+      - 87b4c98f6343d6c5188d6872d45f08bf
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
@@ -60,13 +60,13 @@ http_interactions:
       X-Rate-Limit-Limit:
       - '180'
       X-Rate-Limit-Remaining:
-      - '179'
+      - '178'
       X-Rate-Limit-Reset:
       - '1443631364'
       X-Response-Time:
-      - '203'
+      - '133'
       X-Transaction:
-      - e3fdc047e36a4766
+      - 32e513ddc2c0329b
       X-Twitter-Response-Tags:
       - BouncerCompliant
       X-Xss-Protection:
@@ -1142,7 +1142,7 @@ http_interactions:
         J. Trump","id":25073877,"id_str":"25073877","indices":[97,113]}],"urls":[],"media":[{"id":645676646457061376,"id_str":"645676646457061376","indices":[115,137],"media_url":"http:\/\/pbs.twimg.com\/media\/CPXnfS_WsAAUu05.png","media_url_https":"https:\/\/pbs.twimg.com\/media\/CPXnfS_WsAAUu05.png","url":"http:\/\/t.co\/7HAVw3JeZK","display_url":"pic.twitter.com\/7HAVw3JeZK","expanded_url":"http:\/\/twitter.com\/keithellison\/status\/645679612530401281\/photo\/1","type":"photo","sizes":{"small":{"w":340,"h":147,"resize":"fit"},"medium":{"w":600,"h":260,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":1024,"h":445,"resize":"fit"}}}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},"is_quote_status":false,"retweet_count":2043,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"keithellison","name":"Rep.
         Keith Ellison","id":14135426,"id_str":"14135426","indices":[3,16]},{"screen_name":"RealBenCarson","name":"Dr.
         Ben Carson","id":1180379185,"id_str":"1180379185","indices":[94,108]},{"screen_name":"realDonaldTrump","name":"Donald
-        J. Trump","id":25073877,"id_str":"25073877","indices":[115,131]}],"urls":[],"media":[{"id":645676646457061376,"id_str":"645676646457061376","indices":[143,144],"media_url":"http:\/\/pbs.twimg.com\/media\/CPXnfS_WsAAUu05.png","media_url_https":"https:\/\/pbs.twimg.com\/media\/CPXnfS_WsAAUu05.png","url":"http:\/\/t.co\/7HAVw3JeZK","display_url":"pic.twitter.com\/7HAVw3JeZK","expanded_url":"http:\/\/twitter.com\/keithellison\/status\/645679612530401281\/photo\/1","type":"photo","sizes":{"small":{"w":340,"h":147,"resize":"fit"},"medium":{"w":600,"h":260,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":1024,"h":445,"resize":"fit"}},"source_status_id":645679612530401281,"source_status_id_str":"645679612530401281","source_user_id":14135426,"source_user_id_str":"14135426"}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"}],"search_metadata":{"completed_in":0.065,"max_id":649253177385201665,"max_id_str":"649253177385201665","query":"from%3ASenCoryGardner+OR+from%3ARepDianaDeGette+OR+from%3ASenBennetCo","refresh_url":"?since_id=649253177385201665&q=from%3ASenCoryGardner%20OR%20from%3ARepDianaDeGette%20OR%20from%3ASenBennetCo&result_type=recent&include_entities=1","count":100,"since_id":0,"since_id_str":"0"}}'
+        J. Trump","id":25073877,"id_str":"25073877","indices":[115,131]}],"urls":[],"media":[{"id":645676646457061376,"id_str":"645676646457061376","indices":[143,144],"media_url":"http:\/\/pbs.twimg.com\/media\/CPXnfS_WsAAUu05.png","media_url_https":"https:\/\/pbs.twimg.com\/media\/CPXnfS_WsAAUu05.png","url":"http:\/\/t.co\/7HAVw3JeZK","display_url":"pic.twitter.com\/7HAVw3JeZK","expanded_url":"http:\/\/twitter.com\/keithellison\/status\/645679612530401281\/photo\/1","type":"photo","sizes":{"small":{"w":340,"h":147,"resize":"fit"},"medium":{"w":600,"h":260,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":1024,"h":445,"resize":"fit"}},"source_status_id":645679612530401281,"source_status_id_str":"645679612530401281","source_user_id":14135426,"source_user_id_str":"14135426"}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"}],"search_metadata":{"completed_in":0.073,"max_id":649253177385201665,"max_id_str":"649253177385201665","query":"from%3ASenCoryGardner+OR+from%3ARepDianaDeGette+OR+from%3ASenBennetCo","refresh_url":"?since_id=649253177385201665&q=from%3ASenCoryGardner%20OR%20from%3ARepDianaDeGette%20OR%20from%3ASenBennetCo&result_type=recent&include_entities=1","count":100,"since_id":0,"since_id_str":"0"}}'
     http_version: 
   recorded_at: Wed, 30 Sep 2015 16:27:46 GMT
 recorded_with: VCR 2.9.3
