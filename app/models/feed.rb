@@ -3,8 +3,15 @@ class Feed
     @service ||= TwitterService.new
   end
 
-  def self.combined_feed(length, twitter_handles)
-    tweets = service.combined_feed(twitter_handles)[:statuses]
+  def self.combined_feed(length, handles)
+    tweets = service.combined_feed(handles)[:statuses]
+    tweets.take(length.to_i).map do |t|
+      Tweet.new(t)
+    end
+  end
+
+  def self.individual_feed(length, handle)
+    tweets = service.individual_feed(handle)[:statuses]
     tweets.take(length.to_i).map do |t|
       Tweet.new(t)
     end
