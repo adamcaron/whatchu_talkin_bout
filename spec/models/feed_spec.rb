@@ -8,9 +8,8 @@ RSpec.describe Feed, type: :model do
         expect(Feed).to respond_to(:service)
       end
 
-      it "responds to 'combined_feed'" do
-        expect(Feed).to respond_to(:combined_feed)
-        expect(Feed).to respond_to(:individual_feed)
+      it "responds to 'create'" do
+        expect(Feed).to respond_to(:create)
       end
     end
 
@@ -23,10 +22,10 @@ RSpec.describe Feed, type: :model do
         end
       end
 
-      context "self.combined_feed" do
-        it "responds with " do
-          VCR.use_cassette('feed#combined_feed') do
-            feed = Feed.combined_feed(["SenCoryGardner", "RepDianaDeGette", "SenBennetCo"], 9)
+      context "self.create" do
+        it "responds with a combined feed when multiple legislators are passed" do
+          VCR.use_cassette('feed#create_combined_feed') do
+            feed = Feed.create(["SenCoryGardner", "RepDianaDeGette", "SenBennetCo"], 9)
 
             expect(feed.count).to be(9)
             expect(feed.first.class).to be(Tweet)
@@ -38,12 +37,10 @@ RSpec.describe Feed, type: :model do
               :@text])
           end
         end
-      end
 
-      context "self.individual_feed" do
-        it "responds with " do
-          VCR.use_cassette('feed#individual_feed') do
-            feed = Feed.individual_feed("RepDianaDeGette", 9)
+        it "responds with an individual feed when one legislator is passed" do
+          VCR.use_cassette('feed#create_individual_feed') do
+            feed = Feed.create(["RepDianaDeGette"], 9)
 
             expect(feed.count).to be(9)
             expect(feed.first.class).to be(Tweet)
@@ -57,6 +54,7 @@ RSpec.describe Feed, type: :model do
           end
         end
       end
+
     end
 
   end

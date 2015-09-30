@@ -12,18 +12,17 @@ function renderCombinedTwitterFeed(legislators){
   // Request the Tweets
   $.ajax({
     type: "GET",
-    url:  "/combined_feed",
+    url:  "/feed/create",
     data: { handles: legislatorTwitterHandles, feed_length: 13 },
     success: function(tweets) {
-      // Set the page title
-      $("#feed-title").text(
-        "Here\'s what your legislators have been saying:"
-        )
 
       // Clear the feed if there are already tweets
       if($("#feed").after("#feed h2").has("article")) {
         $("#feed").after("#feed h2").empty()
       }
+
+      // Set the page title
+      $("#feed").append("<h2 id='feed-title'>Here\'s what your legislators have been saying:</h2>")
 
       // Render the Tweets
       $.each(tweets, function(index, tweet) {
