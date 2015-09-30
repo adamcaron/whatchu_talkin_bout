@@ -15,7 +15,7 @@ class TwitterService
     connection.search( handles, result_type: "recent" ).to_h
   end
 
-  def individual_feed(legislator)
-    connection.search( "from:#{legislator}", result_type: "recent" ).to_h
-  end
+  # def individual_feed(legislator)
+  #   connection.search( "from:#{legislator}", result_type: "recent" ).to_h
+  # end
 end

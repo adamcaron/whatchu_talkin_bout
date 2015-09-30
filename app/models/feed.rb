@@ -10,10 +10,10 @@ class Feed
     end
   end
 
-  def self.individual_feed(handle, length)
-    tweets = service.individual_feed(handle)[:statuses]
-    tweets.take(length.to_i).map do |t|
-      Tweet.new(t)
-    end
-  end
+  # def self.individual_feed(handle, length)
+  #   tweets = service.individual_feed(handle)[:statuses]
+  #   tweets.take(length.to_i).map do |t|
+  #     Tweet.new(t)
+  #   end
+  # end
 end
