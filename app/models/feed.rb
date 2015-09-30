@@ -9,5 +9,4 @@ class Feed
       Tweet.new(t)
     end
   end
-
 end
