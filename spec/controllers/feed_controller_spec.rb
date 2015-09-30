@@ -10,9 +10,9 @@ RSpec.describe FeedController, type: :controller do
   scenario "#combined_feed" do
     VCR.use_cassette("feed_controller#combined_feed") do
       get :combined_feed,
-            format: :json,
-            number_of_tweets: 9,
-            legislator_twitter_handles: ["SenCoryGardner", "RepDianaDeGette", "SenBennetCo"]
+            format:      :json,
+            feed_length: 9,
+            handles:     ["SenCoryGardner", "RepDianaDeGette", "SenBennetCo"]
 
       tweets = JSON.parse(response.body, symbolize_names: true)
 

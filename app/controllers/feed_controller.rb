@@ -4,10 +4,10 @@ class FeedController < ApplicationController
   end
 
   def combined_feed
-    render json: Feed.combined_feed(params[:feed_length], params[:handles])
+    render json: Feed.combined_feed(params[:handles], params[:feed_length])
   end
 
   def individual_feed
-    render json: Feed.individual_feed(params[:feed_length], params[:handle])
+    render json: Feed.individual_feed(params[:handle], params[:feed_length])
   end
 end

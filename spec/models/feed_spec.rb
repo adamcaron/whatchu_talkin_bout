@@ -25,7 +25,7 @@ RSpec.describe Feed, type: :model do
       context "self.combined_feed" do
         it "responds with " do
           VCR.use_cassette('feed#combined_feed') do
-            feed = Feed.combined_feed(9, ["SenCoryGardner", "RepDianaDeGette", "SenBennetCo"])
+            feed = Feed.combined_feed(["SenCoryGardner", "RepDianaDeGette", "SenBennetCo"], 9)
 
             expect(feed.count).to be(9)
             expect(feed.first.class).to be(Tweet)
