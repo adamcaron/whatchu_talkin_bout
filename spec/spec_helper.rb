@@ -1,17 +1,17 @@
 require 'simplecov'
-require 'webmock'
-require 'vcr'
 SimpleCov.start 'rails'
-
-VCR.configure do |config|
-  config.cassette_library_dir = "spec/cassettes"
-  config.hook_into :webmock # after VCR records the response, stub the info
-end
+require 'webmock'
+require 'vcr_setup'
+require 'helpers'
 
 RSpec.configure do |config|
+  include Helpers
+
+  # setup Capybara
   require 'capybara/rspec'
   config.include Capybara::DSL
 
+  # setup DB Cleaner
   require 'database_cleaner'
   config.before(:suite) do
     DatabaseCleaner.clean_with(:truncation)
@@ -31,34 +31,6 @@ RSpec.configure do |config|
 
   config.after(:each) do
     DatabaseCleaner.clean
-  end
-
-  def login_user!
-    OmniAuth.config.test_mode = true
-
-    OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new(
-      {
-        "provider"=>"twitter",
-        "uid"=>"2975056012",
-        "info"=>
-        {
-          "nickname"=>"adamcaron_",
-          "name"=>"Adam Caron",
-          "email"=>nil,
-          "location"=>"Denver, CO",
-          "image"=>"http://pbs.twimg.com/profile_images/634476865172828161/_CNlNT--_normal.jpg",
-          "description"=>"Developer and Designer of Software;\nLover of anything that benefits people",
-          "urls"=> {
-            "Website"=>nil,
-            "Twitter"=>"https://twitter.com/adamcaron_"
-          }
-        },
-        "credentials"=> {
-          "token"=>  ENV["TWITTER_ACCESS_TOKEN"],
-          "secret"=> ENV["TWITTER_ACCESS_TOKEN_SECRET"]
-        }
-      }
-    )
   end
 
   config.expect_with :rspec do |expectations|
