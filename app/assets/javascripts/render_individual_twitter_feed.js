@@ -1,8 +1,8 @@
 $(document).ready(function(){
   $("#legislators").delegate(".legislator a", "click", function(){
-      var legislatorName = $(this).data("legislator-name")
-      var handle         = $(this).data("twitter-handle")
-      getIndividualTwitterFeed(legislatorName, handle)
+    var legislatorName = $(this).data("legislator-name")
+    var handle         = $(this).data("twitter-handle")
+    getIndividualTwitterFeed(legislatorName, handle)
   })
 })
 

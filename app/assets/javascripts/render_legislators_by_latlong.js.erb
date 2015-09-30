@@ -1,0 +1,55 @@
+$(".feed.show").ready(function(){
+  getLegislatorsByLocation()
+})
+
+function getLegislatorsByLocation(){
+  function postitionSuccessCallback(position){
+    var latitude  = position.coords.latitude;
+    var longitude = position.coords.longitude;
+
+    $.ajax({
+      type: "GET",
+      url:  "http://congress.api.sunlightfoundation.com/legislators/locate?latitude="
+            + latitude
+            + "&longitude="
+            + longitude
+            + "&apikey=e12961d962b64b66b4ce180286f0e8a2",
+      success: function(legislators){
+
+        // Display the legislators
+        renderLegislators(legislators)
+
+        // Display a combined Twitter feed using their Twitter handles
+        renderCombinedTwitterFeed(legislators)
+      }
+    })
+  };
+  navigator.geolocation.getCurrentPosition(postitionSuccessCallback);
+}
+
+function renderLegislators(legislators){
+  $.each(legislators.results, function(index, legislator){
+    renderIndividualLegislator(legislator)
+  })
+}
+
+function renderIndividualLegislator(legislator){
+  var legislatorName =
+    legislator.title
+    + ". "
+    + legislator.first_name
+    + " "
+    + legislator.last_name
+
+  $("#legislators").append(
+    "<article class='legislator''><h3 class='name'>"
+    + legislatorName
+    + "</h3><br><a href='#' data-legislator-name='"
+    + legislatorName
+    + "' data-twitter-handle='"
+    + legislator.twitter_id
+    + "'>See "
+    + legislatorName
+    + ". 's Recent Tweets...</a></article>"
+    )
+}

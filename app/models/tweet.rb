@@ -1,7 +1,3 @@
-require 'action_view'
-require 'action_view/helpers'
-include ActionView::Helpers::DateHelper
-
 class Tweet
   attr_reader :profile_img,
               :user_name,
