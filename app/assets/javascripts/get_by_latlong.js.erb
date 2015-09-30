@@ -1,4 +1,4 @@
-$( ".feed.show" ).ready(function(){
+$(".feed.show").ready(function(){
   getLegislatorsByLocation()
 })
 
@@ -17,7 +17,7 @@ function getLegislatorsByLocation() {
       success: function(legislators) {
 
         // Display the loading message
-        $( "#feed-title" ).text(
+        $("#feed-title").text(
           "Getting Tweets ..."
         )
 
@@ -50,7 +50,7 @@ function getCombinedTwitterFeed(legislatorTwitterHandles) {
       },
     success: function(tweets) {
       // Set the page title
-      $( "#feed-title" ).text(
+      $("#feed-title").text(
         "Here\'s what your legislators have been saying:"
         )
 
@@ -63,7 +63,7 @@ function getCombinedTwitterFeed(legislatorTwitterHandles) {
 }
 
 function renderTweet(tweet){
-  $( "#feed" ).append(
+  $("#feed").append(
     "<article class='tweet'><img src='"
     + tweet.profile_img
     + "' /><h3 class='name'>"
@@ -80,7 +80,7 @@ function renderTweet(tweet){
 }
 
 function renderLegislator(legislator) {
-  $( "#legislators" ).append(
+  $("#legislators").append(
     "<article class='legislator' data-twitter-handle='"
     + legislator.twitter_id
     + "'><h3 class='name'>"
