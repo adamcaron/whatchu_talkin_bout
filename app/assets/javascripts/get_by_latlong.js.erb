@@ -62,34 +62,22 @@ function getCombinedTwitterFeed(legislatorTwitterHandles) {
   })
 }
 
-function renderTweet(tweet){
-  $("#feed").append(
-    "<article class='tweet'><img src='"
-    + tweet.profile_img
-    + "' /><h3 class='name'>"
-    + tweet.user_name
-    + "</h3><a class='handle' href='"
-    + tweet.profile_url
-    + "'>"
-    + tweet.user_handle
-    + "</a>"
-    + "<p>"
-    + tweet.text
-    + "</p></article>"
-    )
-}
-
 function renderLegislator(legislator) {
-  $("#legislators").append(
-    "<article class='legislator' data-twitter-handle='"
-    + legislator.twitter_id
-    + "'><h3 class='name'>"
-    + legislator.title
+  var legislatorName =
+    legislator.title
     + " "
     + legislator.first_name
     + " "
     + legislator.last_name
-    + "</h3><br><a href='#'>See "
+
+  $("#legislators").append(
+    "<article class='legislator''><h3 class='name'>"
+    + legislatorName
+    + "</h3><br><a href='#' data-legislator-name='"
+    + legislatorName
+    + "' data-twitter-handle='"
+    + legislator.twitter_id
+    + "'>See "
     + legislator.title
     + " "
     + legislator.first_name
@@ -97,4 +85,5 @@ function renderLegislator(legislator) {
     + legislator.last_name
     + "'s Recent Tweets...</a></article>"
     )
+
 }
