@@ -2,7 +2,7 @@ function renderTweet(tweet){
   $("#feed").append(
     "<article class='tweet'><img src='"
     + tweet.profile_img
-    + "' /><h3 class='name'>"
+    + "' /><div><h3 class='name'>"
     + tweet.user_name
     + "</h3><a class='handle' href='"
     + tweet.profile_url
@@ -11,6 +11,6 @@ function renderTweet(tweet){
     + "</a>"
     + "<p>"
     + tweet.text
-    + "</p></article>"
+    + "</p></div></article>"
     )
 }
