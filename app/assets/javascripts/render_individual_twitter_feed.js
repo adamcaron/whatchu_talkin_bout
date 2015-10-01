@@ -14,9 +14,7 @@ function getIndividualTwitterFeed(legislatorName, handle){
     success: function(tweets) {
 
       // Clear the feed if there are already tweets
-      if($("#feed").after("#feed h2").has("article")) {
-        $("#feed").after("#feed h2").empty()
-      }
+      $("#feed").after().empty()
 
       // Set the page title
       $("#feed").append("<h2 id='feed-title'>Here\'s what your legislators have been saying:</h2>")
