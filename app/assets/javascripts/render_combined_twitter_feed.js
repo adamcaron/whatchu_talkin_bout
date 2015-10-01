@@ -16,6 +16,9 @@ function renderCombinedTwitterFeed(legislators){
     data: { handles: legislatorTwitterHandles, feed_length: 13 },
     success: function(tweets) {
 
+      // Clear the feed if there are already tweets
+      $("#feed").after().empty()
+
       // Set the page title
       $("#feed").append("<h2 id='feed-title'>Here\'s what your legislators have been saying:</h2>")
 
