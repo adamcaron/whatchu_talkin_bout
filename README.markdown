@@ -1,4 +1,4 @@
-[![Stories in Ready](https://badge.waffle.io/adamcaron/whatchu_talkin_bout.png?label=ready&title=Ready)](https://waffle.io/adamcaron/whatchu_talkin_bout)
+[![Stories in Ready](https://badge.waffle.io/adamcaron/whatchu_talkin_bout.png?label=ready&title=Ready)](https://waffle.io/adamcaron/whatchu_talkin_bout) | [Production URL](http://whatchu-talkin-bout.herokuapp.com/)
 # Whatchu Talkin' Bout?
 
 See what you're elected officials have been discussing on Twitter.
